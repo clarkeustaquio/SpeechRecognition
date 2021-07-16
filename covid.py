@@ -24,7 +24,6 @@ cold = 0
 flu = 0
 allergy = 0
 
-
 def recognize():
     global covid, cold, flu, allergy, is_recognize
 
@@ -39,23 +38,20 @@ def recognize():
             if text == 'One':
                 allergy += 1
                 is_recognize = True
-                print('You said: ', text)
             elif text == 'Two':
                 flu += 1
                 is_recognize = True
-                print('You said: ', text)
             elif text == 'Three':
                 cold += 1
                 is_recognize = True
-                print('You said: ', text)
             elif text == 'Four':
                 covid += 1
                 is_recognize = True
-                print('You said: ', text)
             else:
                 is_recognize = False
                 print('Speech invalid: ', text)
-
+            
+            print('You said: ', text)
             
             return is_recognize
 
